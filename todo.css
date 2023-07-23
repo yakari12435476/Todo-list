@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    width:100vw;
+    height: 100vh;
+ padding-left:35vw;
+ padding-top:20vh ;
+  
+}
+.todo_app{
+    background-color: #fff;
+    min-height: 162px;
+    max-height: 500px;
+    width: 387px;
+    border-radius: 32px;
+    overflow:auto;
+}
+.todo_app::-webkit-scrollbar{
+    display:none;
+}
+.todo_app h1{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+animation:ani 1s ease-in;
+font-size: 40px;
+position: sticky;
+    top: 0;
+   
+}
+.todo_app h1 img{
+animation:ani 1s ease-in;
+position: sticky;
+ top: 0;
+}
+@keyframes ani{
+    0%{
+     rotate:10deg ;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 25px;
+    word-spacing: 2px;
+    position: sticky;
+    top: 42px;
+}
+#input{
+    width: 328px;
+    height: 36px;
+    border-radius: 16px;
+    outline: none;
+    border: 3px groove #fff;
+}
+#add{
+    height: 38px;
+    width: 71px;
+    color: white;
+    background-color: coral;
+    margin-left: 13px;
+    border-radius: 21px;
+}
+ul li{
+    list-style-type: none;
+    padding: 12px 8px 12px 50px;
+    line-height: 55px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 17px;
+    position: relative;
+   
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 27px;
+    left: 13px;
+}
+.checked{
+color: #555;
+text-decoration: line-through;
+
+}
+.checked::before{
+    background-image: url(images/checked.png);
+}
+.span{
+    float: right;
+    padding-right: 43px;
+    font-size: 28px;
+    color: red;
+    padding-left:40px;
+}
+.span:hover{
+    background-color: darkgray;
+    border-radius: 100px;
+}
